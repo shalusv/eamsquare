@@ -1,0 +1,271 @@
+footer {
+  background-color: #025b6c; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Address Section with 3 columns */
+.footer-address {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.address-column {
+  flex: 1; /* Equal width */
+  min-width: 250px; /* Ensure minimum width */
+  text-align: left;
+}
+
+.footer-logo img {
+  width: 150px; /* Increase logo size */
+  margin-bottom: 1rem;
+}
+
+.logo-transparent {
+  background-color: rgba(255, 255, 255, 0.5); /* White transparent background */
+  padding: 10px; /* Padding to create space around the logo */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-right .subscribe-message{
+  color:var(--secondary-color);
+  font-weight: bold;
+ text-align: left;
+ width: 100%;
+}
+.footer-right .subscribe-message p{
+ margin-bottom: 0;
+}
+
+.footer-center{
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.footer-left {
+
+  align-items: center;
+}
+
+.address-column p strong {
+  color: var(--secondary-color);
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Phone Numbers and Email */
+.footer-center .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.footer-center .footer-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  flex-direction: column;
+}
+
+/* Clickable links for contact items */
+.footer-center .contact-item a {
+  color: white; /* Set text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-center .contact-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.footer-center .contact-item .icon {
+  color: var(--secondary-color);
+}
+
+.footer-center .contact-item:hover .icon {
+  color: var(--white);
+}
+
+.footer-center .contact-item:hover p {
+  color: var(--secondary-color);
+}
+
+
+
+.social-media a {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin: 0 0.5rem;
+}
+
+.social-media a:hover {
+  color: white;
+}
+
+.email-subscribe {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Full width for email subscription */
+}
+
+.email-subscribe input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  width: 100%; /* Full width input */
+}
+
+.email-subscribe button {
+  padding: 6px 20px;;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.email-subscribe button:hover {
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+.email-subscribe .icon {
+  font-size: 1.2rem;
+}
+
+/* Copyright Section */
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin:0;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Responsive Design */
+/* Flexbox for Phone Numbers and Email on Small Screens */
+@media (max-width: 767px) {
+  .footer-center {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }  
+  .footer-center .contact-item {
+    justify-content: flex-start; /* Align items to the left */
+  }
+
+
+  .footer-right .subscribe-message{
+    text-align: center;
+   
+   }
+}
+
+/* Right Section: Social Media and Email Subscription */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-address {
+    flex-direction: row;
+  }
+
+  .footer-center,
+  .footer-right {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-address {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .address-column {
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .footer-center {
+    display: flex;
+    gap: 1rem;
+    width: 100%; /* Make sure it occupies full width */
+  }
+
+  .footer-center .footer-contact {
+      flex-direction: column;
+      align-items: center;
+  }
+
+}
+
+/* Add rotation animation */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rotate class to be applied to the icon during loading */
+.icon.rotate {
+  animation: rotate 1s linear infinite;
+}

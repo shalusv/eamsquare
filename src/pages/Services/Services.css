@@ -1,0 +1,79 @@
+.services-page {
+  padding: 40px 20px;
+  max-width: 90%;
+  /* background-color: #e0e0e7; Light background for contrast */
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  color: #333; /* Darker text for readability */
+}
+
+.services-page-heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #025b6c; /* Dark green for professional tone */
+}
+
+.services-page-heading::before,
+.services-page-heading::after {
+  content: '';
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #d56c50; /* Orange color from your theme */
+  vertical-align: middle;
+  margin: 0 10px;
+}
+
+.services-page-heading-one {
+  color: #d56c50; /* Orange from the brand logo */
+  text-transform: uppercase;
+}
+
+.services-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services-page-box {
+  background-color: #ffffff; /* Clean white background for service boxes */
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a raised effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.services-page-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.services-page-box h3 {
+  font-size: 2rem;
+  color: #025b6c; /* Dark green */
+  margin-bottom: 15px;
+}
+
+.services-page-box p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555; /* Softer grey for readability */
+  text-align: justify;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .services-page-heading {
+    font-size: 2rem;
+  }
+
+  .services-page-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .services-page-box p {
+    font-size: 1rem;
+  }
+}

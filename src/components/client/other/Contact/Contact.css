@@ -1,0 +1,21 @@
+/* src/components/Contact/Contact.css */
+.contact {
+  background-color: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+}

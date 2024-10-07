@@ -1,0 +1,152 @@
+/* src/css/root.css */
+:root {
+  --primary-color: #025b6c;
+  --secondary-color: #d56c50;
+  --text-color:#FFF;
+  --caption-color:#fff;
+  --white: #ffffff;
+  --text-color: #333333;
+  --page-heading-color:#999;
+  --page-background-color:#fff;
+  --icon-border-color:#fff;
+
+  --icon-border-size:2px;
+
+
+  --service-title-color: #FFF;
+  --service-description-color: #ccc;
+  --service-title-border-color:#ffffff00;
+  --service-description-border-color:#d56c50;
+
+
+  --project-section-bg-color: #666;
+
+  --black-transparent-color:rgba(0, 0, 0, 0.8);
+  --white-transparent-color:rgba(255, 255, 255, 0.8);
+  --shadow-color:#FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.page-section {
+  padding: 40px 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  position: relative;
+}
+
+
+/* common styles for all */
+
+.required {
+  color: red;
+  margin-left: 5px;
+}
+
+.valid-error {
+  color: red; /* Error message color */
+  font-size: 0.875rem; /* Small font size for error messages */
+  margin-top: 5px; /* Adds space above the error message */
+  height: 20px; /* Fixed height to prevent layout shifting */
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Initially fully transparent */
+  transition: opacity 0.2s ease-in-out; /* Smooth fade in/out transition */
+}
+
+/* If the error message is not empty, show it */
+.valid-error:not(:empty) {
+  visibility: visible; /* Make the error message visible */
+  opacity: 1; /* Fully visible */
+}
+
+/* Ensures the hidden state when there's no error */
+.valid-error:empty {
+  visibility: hidden; /* Hidden when no error message */
+  opacity: 0; /* Fully transparent */
+}
+
+
+.success-message,
+.error-message {
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  text-align: center;
+}
+
+.error-message {
+color: red;
+}
+.success-message {
+color: green;
+}
+
+.fade-message {
+  opacity: 1;
+  transition: opacity 2.5s ease-in-out;
+  animation: fadeOut 3s forwards;
+}
+
+ @keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.message-box {
+  height: 20px; /* Fixed height for the message box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-submit-button {
+  background-color: #d56c50;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 200px;
+  font-weight: 400;
+}
+
+.form-submit-button:hover {
+  background-color: #025b6c;
+}
+
+@media (max-width: 768px) {
+  .form-submit-button {
+      font-size: 1rem;
+  }
+}

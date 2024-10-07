@@ -1,0 +1,11 @@
+/* src/pages/Home/Home.css */
+main {
+  /* padding-top: 60px; To offset fixed header */
+}
+
+.section {
+  min-height: 70vh;
+  padding: 60px ;
+  /* margin-top: 50px; */
+  box-sizing: border-box;
+}

@@ -1,0 +1,10 @@
+/* src/pages/Projects/Projects.css */
+.projects {
+  padding: 60px 20px;
+  text-align: center;
+  /* background-color: var(--light-gray); */
+}
+
+.projects h1 {
+  color: var(--secondary-color);
+}

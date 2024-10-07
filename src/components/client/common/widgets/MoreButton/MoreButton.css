@@ -1,0 +1,29 @@
+.more-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    padding-top: 0;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease, width 0.3s ease;
+    border-radius: 25px; /* Rounded edges for oval effect */
+    width: 100px; 
+    height: 50px; /* Adjust height as necessary */
+  }
+  
+  .more-button:hover {
+    background-color: var(--secondary-color);
+    width: 110px; /* Adjust width on hover */
+  }
+  
+  .more-button i {
+    font-size: 2rem;
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+  }
+  
+  .more-button.hovered i {
+    color: white;
+    transform: translateX(10px); /* Move the arrow slightly on hover */
+  }
+  

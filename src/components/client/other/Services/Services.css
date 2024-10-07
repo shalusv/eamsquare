@@ -1,0 +1,102 @@
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+/* Center service boxes and ensure they occupy full width */
+.service-box {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 250px;
+  width: 100%; /* Ensure full width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Hide overflow to maintain clean borders */
+}
+
+/* Full card size for the transparent background */
+.service-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+  transition: opacity 0.5s ease; /* Smooth transition for opacity */
+  z-index: 1; /* Ensure it's above the background image */
+}
+
+/* Center positioning for title and description */
+.service-title, .service-description {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--service-title-color);
+  z-index: 2; /* Ensure text is above the background */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation */
+}
+
+.service-title {
+  color: var(--service-title-color);
+  border-top: solid 5px var(--service-title-border-color);
+}
+
+
+/* Center display for the title */
+.service-title {
+  top: 40%; /* Centered vertically */
+  font-size: 1.5rem;
+}
+
+/* Center display for the description (hidden initially) */
+.service-description {
+  top: 60%; /* Below the title */
+  opacity: 0; /* Fully transparent */
+  font-size: 1.2rem;
+  color: var(--service-description-color);
+  /* border-bottom: solid 5px var(--service-description-border-color); */
+  text-align: center;
+}
+
+/* Hover effect */
+.service-box:hover::before {
+  opacity: 1; /* Full opacity for background */
+}
+
+.service-box:hover .service-title {
+  transform: translateY(-20px); /* Move title upwards */
+  opacity: 0; /* Fade out title */
+}
+
+.service-box:hover .service-description {
+  transform: translateY(-20px); /* Slide up description with title */
+  opacity: 1; /* Fade in */
+  top: 40%; /* Move to center position */
+}
+
+/* Adjust for medium-sized screens */
+@media (max-width: 1200px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+  }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(1, 1fr); /* Single column for smaller screens */
+  }
+
+  .service-box {
+    max-width: none; /* Allow it to take full width */
+    width: 100%; /* Full width */
+    margin: 10px 0; /* Space between boxes */
+  }
+}

@@ -1,0 +1,30 @@
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:40px;
+    text-align: center;
+  }
+  
+  .line {
+    flex: 1;
+    height: 2px;
+    background-color: var(--secondary-color); /* Line color */
+  }
+  
+  .heading-text h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0 20px; /* Space between the lines and heading */
+    position: relative;
+  }
+  
+
+  /* Responsive Styles */
+@media (max-width: 768px) {
+  .section-heading {
+    margin-bottom:30px;
+  
+  }
+  }
+  

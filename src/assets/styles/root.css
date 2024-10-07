@@ -1,0 +1,38 @@
+/* Root CSS file for global styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: #025b6c; /* Footer background color */
+  color: #ffffff; /* Footer text color */
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ensure footer is at the bottom of the page */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

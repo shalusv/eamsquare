@@ -1,0 +1,14 @@
+ p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+
+    .about-page .page-heading {
+      font-size:15px;
+    }
+  }
+  

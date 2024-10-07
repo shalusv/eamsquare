@@ -1,0 +1,108 @@
+/* Top Banner Styles */
+.top-banner {
+  background-color: var(--primary-color); /* Dark primary color */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Space out items */
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
+  z-index: 1000;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 15px; /* Space between icon and text */
+  letter-spacing: 1px;
+}
+
+/* New styles for contact numbers */
+.numbers {
+  background-color: var(--secondary-color); /* Orange background color */
+  border-radius: 25px; /* Oval shape */
+  padding: 10px; /* Padding inside the oval */
+  display: flex;
+  justify-content: space-evenly; /* Center align numbers */
+  row-gap: 0px;
+  column-gap: 30px; /* Space between numbers */
+  transition: border ease 2s;
+  line-height: 10px;
+}
+
+.contact-number {
+  cursor: pointer; /* Indicate clickability */
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+.contact-number:hover,.contact-number .contact-link:hover {
+  cursor: pointer; /* Indicate clickability */
+ color: var(--primary-color);
+}
+.email-web:hover, .email-web .contact-link:hover {
+  cursor: pointer; /* Indicate clickability */
+  color: var(--secondary-color);
+}
+/* Styles for contact links */
+.contact-link {
+  color: white; /* White text color */
+  text-decoration: none; /* No underline */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.top-banner {
+  flex-direction: column; /* Stack items vertically on small screens */
+  align-items: center; /* Center align all items */
+  gap: 3px;
+}
+
+.numbers {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap; /* Allow numbers to wrap on small screens */
+  font-size: 15px; 
+  border-radius: 45px;/* Adjust font size for smaller screens */
+  padding: 5px; /* Padding inside the oval */
+}
+
+.contact-number:first-child {
+  width: 100%; /* Full width for the first contact number */
+ /* Center the first contact number */
+  margin-bottom: 8px; /* Add some space between the first and second lines */
+}
+
+.contact-number:nth-child(2),
+.contact-number:nth-child(3) {
+  width: auto; /* Keep the second and third numbers on the same line */
+}
+}
+
+
+@media (max-width: 400px) {
+
+  .numbers {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 15px; 
+  }
+  
+  .contact-number:first-child {
+    width: 100%; /* Full width for the first contact number */
+   /* Center the first contact number */
+    margin-bottom: 8px; /* Add some space between the first and second lines */
+  }
+  
+  .contact-number:nth-child(2),
+  .contact-number:nth-child(3) {
+    width: auto; /* Keep the second and third numbers on the same line */
+  }
+  }

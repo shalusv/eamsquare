@@ -11,6 +11,7 @@ import Contact from "./pages/Contact/Contact";
 import './App.css';
 import ScrollToTop from "./components/client/common/widgets/ScrollTop/ScrollTop";
 import ContactIcon from "./components/client/common/widgets/ContactIcon/ContactIcon";
+import JobVacancies from "./pages/JobVacancies/JobVacancies";
 
 const App = () => (
   <Router>
@@ -23,6 +24,7 @@ const App = () => (
         <Route path="/services" element={<Services />} />
         {/* <Route path="/projects" element={<Projects />} /> */}
         <Route path="/contact" element={<Contact />} />
+        <Route path="/careers" element={<JobVacancies />} />
       </Routes>
     </main>
     <Footer />

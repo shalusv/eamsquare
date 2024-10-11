@@ -1,0 +1,239 @@
+.job-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.job-page-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 140px; /* Set initial max-height */
+  position: relative;
+}
+
+.job-page-box.expanded {
+  max-height: none; /* Remove height limit when expanded */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.job-header h3 {
+  font-size: 1.5rem;
+  color: #025b6c;
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.job-summary {
+  font-size: 1.1rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between; /* Align location and qualification */
+}
+
+.job-summary p {
+  margin-bottom: 0;
+}
+
+.experience {
+  font-size: 0.9rem; /* Smaller text for experience */
+  color: #777; /* Slightly muted color */
+}
+
+.job-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+}
+
+.job-status .status-open {
+  color: green;
+}
+
+.job-status .status-close {
+  color: red;
+}
+
+.job-status svg {
+  font-size: 1rem;
+}
+
+.job-location-date {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between location and posted date */
+  justify-content: space-between;
+}
+
+.location {
+  display: flex;
+  align-items: center; /* Align the icon and text */
+}
+
+.location-icon {
+  color: #025b6c; /* Change this color as needed */
+  margin-right: 5px; /* Space between the icon and text */
+  font-size: 1rem; /* Adjust the icon size */
+}
+
+.job-details {
+  margin-top: 20px;
+  color: #333;
+  /* Use flexbox for the job details section */
+  display: flex; 
+  flex-direction: column; 
+}
+
+.job-detail-section {
+  margin-top: 20px; /* Adds space above each section */
+}
+
+.job-details h4 {
+  margin-bottom: 10px; /* Adjust space below the headings */
+}
+
+.job-details p {
+  margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.job-details ul {
+  list-style-type: disc;
+  padding-left: 20px; /* Indent lists */
+}
+
+.job-page-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Apply button styles */
+.apply-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #025b6c; /* Your button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: #d56c50; /* Your hover color */
+}
+
+.job-conclusion {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #025b6c; /* Match your theme color */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .job-page-container {
+    padding: 10px; /* Reduced padding for mobile view */
+  }
+
+  .job-summary {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 0; /* Add gap between qualifications and experience */
+  }
+
+  .job-header h3 {
+    font-size: 1.2rem; /* Smaller title size */
+  }
+
+  .job-summary p {
+    font-size: 0.9rem; /* Reduced font size for qualification and experience */
+  }
+
+  .job-location-date span {
+    font-size: 0.8rem; /* Smaller size for location and posted date */
+  }
+
+  .job-page-box {
+    max-height: 200px; /* Increased max height for visibility */
+    padding: 15px; /* Add some padding */
+  }
+
+  .job-page-box.expanded {
+    max-height: none; /* Remove height limit when expanded */
+  }
+
+  .job-details {
+    margin-top: 15px; /* Space above details */
+    padding: 10px; /* Add padding for better readability */
+    font-size: 0.9rem; /* Reduced font size in details section */
+  }
+
+  .job-detail-section {
+    margin-top: 15px; /* Adds more space above each section */
+  }
+
+  .job-details h4 {
+    margin-bottom: 5px; /* Adjust space below the headings */
+  }
+
+  .job-details p {
+    margin-bottom: 5px; /* Space below paragraphs */
+  }
+
+  .job-details ul {
+    padding-left: 20px; /* Indent lists */
+    margin: 0; /* Reset margin */
+  }
+
+  .apply-button {
+    margin-top: 15px; /* Add space above the button */
+  }
+}
+
+@media (max-width: 525px) {
+  .job-summary p {
+    font-size: 0.85rem; /* Further reduce font size */
+  }
+
+  .job-location-date span {
+    font-size: 0.75rem; /* Smaller size for location and posted date */
+  }
+
+  .job-details {
+    font-size: 0.85rem; /* Reduce font size in details section */
+  }
+
+  .job-page-box.expanded {
+    max-height: none; /* Remove height limit when expanded */
+  }
+}
+
+@media (max-width: 400px) {
+  .job-header h3 {
+    font-size: 1rem; /* Smaller title size */
+  }
+
+  .job-summary p {
+    font-size: 0.8rem; /* Further reduced font size */
+  }
+
+  .job-location-date span {
+    font-size: 0.7rem; /* Smaller size for location and posted date */
+  }
+
+  .job-details {
+    font-size: 0.8rem; /* Reduce font size in details section */
+  }
+
+  .job-page-box.expanded {
+    max-height: none; /* Remove height limit when expanded */
+  }
+}

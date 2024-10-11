@@ -30,6 +30,7 @@
   column-gap: 30px; /* Space between numbers */
   transition: border ease 2s;
   line-height: 10px;
+  padding: 10px 20px;
 }
 
 .contact-number {
@@ -67,23 +68,39 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  flex-wrap: wrap; /* Allow numbers to wrap on small screens */
-  font-size: 15px; 
+  font-size: 18px; 
   border-radius: 45px;/* Adjust font size for smaller screens */
-  padding: 5px; /* Padding inside the oval */
 }
 
-.contact-number:first-child {
-  width: 100%; /* Full width for the first contact number */
- /* Center the first contact number */
-  margin-bottom: 8px; /* Add some space between the first and second lines */
-}
 
 .contact-number:nth-child(2),
 .contact-number:nth-child(3) {
   width: auto; /* Keep the second and third numbers on the same line */
 }
 }
+
+@media (max-width: 600px) {
+
+  .numbers {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 18px; 
+    
+  }
+  
+  .contact-number:first-child {
+    width: 100%; /* Full width for the first contact number */
+   /* Center the first contact number */
+    margin-bottom: 5px; /* Add some space between the first and second lines */
+  }
+  
+  .contact-number:nth-child(2),
+  .contact-number:nth-child(3) {
+    width: auto; /* Keep the second and third numbers on the same line */
+  }
+  }
 
 
 @media (max-width: 400px) {

@@ -52,8 +52,18 @@
 
 @media (max-width: 525px) {
   .page-heading {
-    font-size:16px;
+    font-size:17px;
   
+  }
+}
+
+@media (max-width: 450px) {
+
+  .page-about .page-heading {
+    font-size: 12px;
+
   }
 
 }
+
+

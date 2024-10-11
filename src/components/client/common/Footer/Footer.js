@@ -5,10 +5,10 @@ import {
   FaEnvelope,
   FaGlobe,
   FaFacebookF,
-  FaTwitter,
   FaLinkedinIn,
   FaPaperPlane,
   FaInstagram,
+  FaUserTie,
 } from "react-icons/fa";
 import axios from "axios";
 import "./Footer.css";
@@ -118,6 +118,11 @@ const Footer = () => {
               <div className="contact-item">
                 <FaGlobe className="icon" />
                 <a href="http://eamsquare.com/" target="_blank" rel="noopener noreferrer">www.eamsquare.com</a>
+              </div>
+              <div className="contact-item">
+
+              <FaUserTie className="icon" />
+                <a href="/careers" target="_blank" rel="noopener noreferrer">Careers</a>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import "./About.css";
 import PageHeading from "../../components/client/common/widgets/PageHeading/PageHeading";
 
 const About = () => (
-  <div className="page-section page-margin">
+  <div className="page-section page-margin page-about">
     <PageHeading title="About EAMSQUARE Pvt Ltd" highlight="EAMSQUARE" />
     <p>
       Founded in 2018 in Cochin, Kerala, <span ></span>Eamsquare Pvt Ltd was built with a vision to provide top-tier construction solutions that combine innovation, quality, and expertise. Our services include architectural drawing, structural design, soil investigation, landscaping, and a wide range of engineering and contracting services.

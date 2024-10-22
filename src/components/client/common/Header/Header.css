@@ -4,19 +4,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1rem;
-  background-color: #ffffff; /* White header background */
+  background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
-  top: 0; /* Ensures it sticks at the top */
+  top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* Ensures it stays above other elements */
+  z-index: 999;
 }
 
 .logo {
   display: flex;
   align-items: center;
 }
+
 .logo-link {
   display: flex;
   align-items: center;
@@ -27,32 +28,43 @@
 }
 
 .logo img {
-  height: 50px; /* Adjusted size */
-  margin-right: 0.5rem; /* Space between logo and company name */
+  height: 50px;
+  margin-right: 0.5rem;
 }
 
 .company-name {
   display: flex;
-  align-items: baseline; /* Align text vertically */
-  text-decoration: none; /* Remove underline */
+  align-items: baseline;
+  text-decoration: none;
   font-size: 30px;
+  position: relative;
 }
 
 .company-name .eam {
-  color: var(--eam-color); /* EAM color */
+  color: var(--eam-color);
 }
 
 .company-name .square {
-  color: var(--square-color); /* SQUARE color */
+  color: var(--square-color);
+}
+
+.tagline {
+  position: absolute;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #717575;
+  top: 33px;
+  left: 7px;
 }
 
 .menu-toggle {
-  display: none; /* Hide on larger screens */
+  display: none;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 2rem;
-  color: #025b6d; /* Icon color */
+  color: #025b6d;
 }
 
 .nav-menu {
@@ -79,57 +91,70 @@
   right: 0;
   bottom: 0;
   height: 100%;
-  background-color: var(--navlink-bg-hover); /* Set your desired hover color */
-  transform: translateY(100%); /* Start from the bottom */
-  transition: transform 0.3s ease; /* Smooth transition */
-  z-index: -1; /* Send behind the text */
+  background-color: var(--navlink-bg-hover);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .nav-menu a:hover::after {
-  transform: translateY(0); /* Move to the top on hover */
+  transform: translateY(0);
 }
 
 .nav-menu a.active {
-  color: var(--navlink-color-active); /* Active link color */
+  color: var(--navlink-color-active);
   border-bottom: 3px solid var(--secondary-color);
 }
 
 .nav-menu a:hover {
-  color: var(--navlink-color-hover); /* Hover text color */
+  color: var(--navlink-color-hover);
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .logo img {
-    height: 30px; /* Adjusted size */
-    margin-right: 0.5rem; /* Space between logo and company name */
+    height: 30px;
+    margin-right: 0.5rem;
   }
+
+  .tagline {
+    font-size: 7px;
+    top: 23px;
+    left: 6px;
+  }
+
   .menu-toggle {
     display: flex;
-    align-items: center; /* Show toggle button on small screens */
+    align-items: center;
   }
 
   .nav-menu {
-    display: none; /* Hide main menu on small screens */
+    max-height: 0;
+    overflow: hidden;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Adjusted based on header height */
+    top: 60px;
     right: 0;
     background-color: #ffffff;
     width: 250px;
-    padding: 15px;
+    padding: 0;
     gap: 10px;
-    border: 1px solid #ddd;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease, padding 0.3s ease; /* Shortened transition */
   }
 
   .nav-menu.show {
-    display: flex; /* Show menu when open */
-    border-radius: 10px;
+    max-height: 500px;
+    padding: 15px;
+    border-radius: 0;
+    border-bottom-left-radius: 10px;
   }
 
   .nav-menu a {
-    color: #025b6c; /* Default link color in collapsed menu */
-    padding: 5px; /* Consistent padding in collapsed menu */
+    color: #025b6c;
+    padding: 5px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(var(--primary-color-rgb), 0.1);
   }
@@ -139,8 +164,9 @@
     box-shadow: 0 4px 6px rgba(var(--secondary-color-rgb), 0.1);
     border-bottom: 0px;
   }
+
   .nav-menu a:hover {
-    color: #025b6c; /* Default link color in collapsed menu */
+    color: #025b6c;
   }
 
   .menu-open {
@@ -149,15 +175,15 @@
 
   .company-name {
     display: flex;
-    align-items: baseline; /* Align text vertically */
-    text-decoration: none; /* Remove underline */
+    align-items: baseline;
+    text-decoration: none;
     font-size: 20px;
   }
 }
 
 /* Animations */
 .nav-menu a:hover {
-  animation: pulse 0.3s ease-in-out; /* Pulse animation on hover */
+  animation: pulse 0.3s ease-in-out;
 }
 
 @keyframes pulse {

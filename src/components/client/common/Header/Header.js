@@ -43,6 +43,7 @@ const Header = () => {
             <span className="company-name">
               <span className="eam">EAM</span>
               <span className="square">SQUARE</span>
+              <span className="tagline">CONSTRUCTION SOLUTIONS</span>
             </span>
           </NavLink>
         </div>

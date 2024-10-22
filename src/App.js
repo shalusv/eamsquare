@@ -8,7 +8,7 @@ import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
-import './App.css';
+import "./App.css";
 import ScrollToTop from "./components/client/common/widgets/ScrollTop/ScrollTop";
 import ContactIcon from "./components/client/common/widgets/ContactIcon/ContactIcon";
 import JobVacancies from "./pages/JobVacancies/JobVacancies";
@@ -22,7 +22,7 @@ const App = () => (
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        {/* <Route path="/projects" element={<Projects />} /> */}
+        <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<JobVacancies />} />
       </Routes>

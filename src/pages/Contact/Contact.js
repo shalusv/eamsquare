@@ -100,82 +100,112 @@ const Contact = () => {
           setSuccessMessage("");
         }, 3000);
       } else {
-        setErrorMessage("There was an issue sending your message. Please try again.");
+        setErrorMessage(
+          "There was an issue sending your message. Please try again."
+        );
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      setErrorMessage("There was an error sending your message. Please try again later.");
+      setErrorMessage(
+        "There was an error sending your message. Please try again later."
+      );
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    < >
-    <div id="message"></div>
-    <div className="page-section page-margin">
-      <PageHeading title="Contact us" highlight="us" />
-      <div className="contact-form-container">
-        <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <div className="form-item">
-              <label htmlFor="name">Name<span className="required">*</span></label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-              />
-              <p id="name-error" className={`valid-error ${formErrors.name ? 'visible' : ''}`}>{formErrors.name}</p>
+    <>
+      <div id="message"></div>
+      <div className="page-section page-margin">
+        <PageHeading title="Contact us" highlight="us" />
+        <div className="contact-form-container">
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <div className="form-item">
+                <label htmlFor="name">
+                  Name<span className="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                <p
+                  id="name-error"
+                  className={`valid-error ${formErrors.name ? "visible" : ""}`}
+                >
+                  {formErrors.name}
+                </p>
+              </div>
+              <div className="form-item">
+                <label htmlFor="email">
+                  Email<span className="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                <p
+                  id="email-error"
+                  className={`valid-error ${formErrors.email ? "visible" : ""}`}
+                >
+                  {formErrors.email}
+                </p>
+              </div>
+              <div className="form-item">
+                <label htmlFor="phone">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                <p
+                  id="phone-error"
+                  className={`valid-error ${formErrors.phone ? "visible" : ""}`}
+                >
+                  {formErrors.phone}
+                </p>
+              </div>
+              <div className="form-item full-width">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="4"
+                ></textarea>
+              </div>
             </div>
-            <div className="form-item">
-              <label htmlFor="email">Email<span className="required">*</span></label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <p id="email-error" className={`valid-error ${formErrors.email ? 'visible' : ''}`}>{formErrors.email}</p>
+            <div className="button-message-container">
+              <button
+                type="submit"
+                className="form-submit-button"
+                disabled={isLoading}
+              >
+                {isLoading ? "Sending..." : "Send Message"}
+              </button>
+              <div className="message-box">
+                {successMessage && (
+                  <p className="success-message">{successMessage}</p>
+                )}
+                {errorMessage && (
+                  <p className="error-message">{errorMessage}</p>
+                )}
+              </div>
             </div>
-            <div className="form-item">
-              <label htmlFor="phone">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-              />
-              <p id="phone-error" className={`valid-error ${formErrors.phone ? 'visible' : ''}`}>{formErrors.phone}</p>
-            </div>
-            <div className="form-item full-width">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="4"
-              ></textarea>
-            </div>
-          </div>
-          <div className="button-message-container">
-            <button type="submit" className="form-submit-button" disabled={isLoading}>
-              {isLoading ? "Sending..." : "Send Message"}
-            </button>
-            <div className="message-box">
-              {successMessage && <p className="success-message">{successMessage}</p>}
-              {errorMessage && <p className="error-message">{errorMessage}</p>}
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
     </>
-    
   );
 };
 

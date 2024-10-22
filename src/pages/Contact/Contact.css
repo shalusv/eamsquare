@@ -1,6 +1,3 @@
-
-
-
 .contact-form-container {
   display: flex;
   flex-direction: column;
@@ -23,7 +20,7 @@
 
 .form-item {
   flex: 1;
-  min-width: 250px;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -47,9 +44,6 @@
   flex-basis: 100%;
 }
 
-
-
-
 /* Responsive */
 @media (max-width: 768px) {
   .contact-page-heading {
@@ -60,9 +54,9 @@
     width: 95%;
   }
 
-
+  .contact-form .form-group {
+    gap: 0;
+  }
 }
-
-
 
 /* Success/Error messages */

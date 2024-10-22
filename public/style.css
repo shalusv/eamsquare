@@ -2,28 +2,38 @@
 :root {
   --primary-color: #025b6c;
   --secondary-color: #d56c50;
-  --text-color:#FFF;
-  --caption-color:#fff;
+  --primary-color-rgb: 2, 91, 108;
+  --secondary-color-rgb: 213, 108, 80;
+  --text-color: #fff;
+  --caption-color: #fff;
   --white: #ffffff;
   --text-color: #333333;
-  --page-heading-color:#999;
-  --page-background-color:#fff;
-  --icon-border-color:#fff;
+  --page-heading-color: #999;
+  --page-background-color: #fff;
+  --icon-border-color: #fff;
 
-  --icon-border-size:2px;
+  --menu-btn-open-color: var(--secondary-color);
 
+  --eam-color: var(--secondary-color);
+  --square-color: var(--primary-color);
 
-  --service-title-color: #FFF;
+  --navlink-color: var(--primary-color);
+  --navlink-color-active: var(--secondary-color);
+  --navlink-color-hover: #fff;
+  --navlink-bg-hover: var(--secondary-color);
+
+  --icon-border-size: 2px;
+
+  --service-title-color: #fff;
   --service-description-color: #ccc;
-  --service-title-border-color:#ffffff00;
-  --service-description-border-color:#d56c50;
-
+  --service-title-border-color: #ffffff00;
+  --service-description-border-color: #d56c50;
 
   --project-section-bg-color: #666;
 
-  --black-transparent-color:rgba(0, 0, 0, 0.8);
-  --white-transparent-color:rgba(255, 255, 255, 0.8);
-  --shadow-color:#FFF;
+  --black-transparent-color: rgba(0, 0, 0, 0.8);
+  --white-transparent-color: rgba(255, 255, 255, 0.8);
+  --shadow-color: #fff;
 }
 
 * {
@@ -49,7 +59,6 @@ body {
   color: var(--text-color);
   position: relative;
 }
-
 
 /* common styles for all */
 
@@ -80,7 +89,6 @@ body {
   opacity: 0; /* Fully transparent */
 }
 
-
 .success-message,
 .error-message {
   font-size: 1rem;
@@ -91,10 +99,10 @@ body {
 }
 
 .error-message {
-color: red;
+  color: red;
 }
 .success-message {
-color: green;
+  color: green;
 }
 
 .fade-message {
@@ -103,7 +111,7 @@ color: green;
   animation: fadeOut 3s forwards;
 }
 
- @keyframes fadeOut {
+@keyframes fadeOut {
   0% {
     opacity: 1;
   }
@@ -117,6 +125,7 @@ color: green;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  gap: 20px;
 }
 
 .message-box {
@@ -147,6 +156,10 @@ color: green;
 
 @media (max-width: 768px) {
   .form-submit-button {
-      font-size: 1rem;
+    font-size: 1rem;
+  }
+
+  .message-box p {
+    font-size: 14px;
   }
 }

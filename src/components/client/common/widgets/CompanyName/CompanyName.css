@@ -1,0 +1,13 @@
+.company-name {
+    font-family: 'Poppins', sans-serif; /* Choose a clean, professional font */
+    font-weight: 700;
+  }
+  
+  .company-name-primary {
+    color: var(--primary-color); /* Apply primary color for "SQUARE" */
+  }
+  
+  .company-name-secondary {
+    color: var(--secondary-color); /* Apply secondary color for "EAM" */
+  }
+  

@@ -30,9 +30,21 @@ footer {
   text-align: left;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5); /* White transparent background */
+  padding: 10px; /* Padding to create space around the logo */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 10px;
+}
+
 .footer-logo img {
-  width: 150px; /* Increase logo size */
-  margin-bottom: 1rem;
+  width: 50px; /* Increase logo size */
+}
+
+.footer-logo .company-name {
+  font-size: 30px;
 }
 
 .logo-transparent {
@@ -50,24 +62,22 @@ footer {
   align-items: center;
 }
 
-.footer-right .subscribe-message{
-  color:var(--secondary-color);
+.footer-right .subscribe-message {
+  color: var(--secondary-color);
   font-weight: bold;
- text-align: left;
- width: 100%;
+  text-align: left;
+  width: 100%;
 }
-.footer-right .subscribe-message p{
- margin-bottom: 0;
+.footer-right .subscribe-message p {
+  margin-bottom: 0;
 }
 
-.footer-center{
+.footer-center {
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-
 .footer-left {
-
   align-items: center;
 }
 
@@ -119,8 +129,6 @@ footer {
   color: var(--secondary-color);
 }
 
-
-
 .social-media a {
   font-size: 1.5rem;
   color: var(--secondary-color);
@@ -148,7 +156,7 @@ footer {
 }
 
 .email-subscribe button {
-  padding: 6px 20px;;
+  padding: 6px 20px;
   background-color: var(--secondary-color);
   border: none;
   border-radius: 20px;
@@ -175,7 +183,7 @@ footer {
 }
 
 .footer-copyright p {
-  margin:0;
+  margin: 0;
   text-align: center;
   font-weight: 400;
 }
@@ -193,16 +201,14 @@ footer {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }  
+  }
   .footer-center .contact-item {
     justify-content: flex-start; /* Align items to the left */
   }
 
-
-  .footer-right .subscribe-message{
+  .footer-right .subscribe-message {
     text-align: center;
-   
-   }
+  }
 }
 
 /* Right Section: Social Media and Email Subscription */
@@ -212,9 +218,6 @@ footer {
   align-items: center;
   gap: 1rem;
 }
-
-
-
 
 @media (min-width: 768px) {
   .footer-container {
@@ -243,7 +246,6 @@ footer {
   }
 }
 
-
 @media (max-width: 500px) {
   .footer-center {
     display: flex;
@@ -252,10 +254,9 @@ footer {
   }
 
   .footer-center .footer-contact {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-
 }
 
 /* Add rotation animation */

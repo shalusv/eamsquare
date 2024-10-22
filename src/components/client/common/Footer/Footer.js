@@ -14,6 +14,7 @@ import axios from "axios";
 import "./Footer.css";
 import logo from "../../../../assets/images/logo.png"; // Import your logo
 import config from "../../../../config/config"; // Import your config
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +37,7 @@ const Footer = () => {
       const response = await axios.post(`${config.API_URL}/send-email`, {
         sender_email: email,
       });
-      console.log(`${config.API_URL}/send-email`)
+      console.log(`${config.API_URL}/send-email`);
 
       if (response.status === 200) {
         setSuccessMessage("Thank you for subscribing! We'll keep you updated.");
@@ -47,7 +48,9 @@ const Footer = () => {
           setSuccessMessage("");
         }, 3000);
       } else {
-        setErrorMessage("There was an issue sending your subscription. Please try again.");
+        setErrorMessage(
+          "There was an issue sending your subscription. Please try again."
+        );
 
         // Clear the error message after 3 seconds
         setTimeout(() => {
@@ -56,7 +59,9 @@ const Footer = () => {
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      setErrorMessage("There was an error sending your subscription. Please try again later.");
+      setErrorMessage(
+        "There was an error sending your subscription. Please try again later."
+      );
 
       // Clear the error message after 3 seconds
       setTimeout(() => {
@@ -79,16 +84,30 @@ const Footer = () => {
         {/* Left Section: Logo and Addresses */}
         <div className="footer-left">
           <div className="footer-logo">
-            <img src={logo} alt="Eamsquare Logo" className="logo-transparent" />
+            <img src={logo} alt="Eamsquare Logo" />
+            <span className="company-name">
+              <span className="eam">EAM</span>
+              <span className="square">SQUARE</span>
+            </span>
           </div>
           <div className="footer-address">
             <div className="address-column">
-              <p><strong>Corporate Office:</strong></p>
-              <p>965/1, 1st Floor, Vijayam Arcade, Kovilpadam Road, Ettumanoor, Kottayam, Kerala - 686631</p>
+              <p>
+                <strong>Corporate Office:</strong>
+              </p>
+              <p>
+                965/1, 1st Floor, Vijayam Arcade, Kovilpadam Road, Ettumanoor,
+                Kottayam, Kerala - 686631
+              </p>
             </div>
             <div className="address-column">
-              <p><strong>Regional Office:</strong></p>
-              <p>4/461 (Old 6/858-M), 2nd Floor, Suite 358, Valamkottil Towers, Judgemukku, Kakkanad, Ernakulam, Kerala - 682021</p>
+              <p>
+                <strong>Regional Office:</strong>
+              </p>
+              <p>
+                4/461 (Old 6/858-M), 2nd Floor, Suite 358, Valamkottil Towers,
+                Judgemukku, Kakkanad, Ernakulam, Kerala - 682021
+              </p>
             </div>
           </div>
         </div>
@@ -117,12 +136,20 @@ const Footer = () => {
               </div>
               <div className="contact-item">
                 <FaGlobe className="icon" />
-                <a href="http://eamsquare.com/" target="_blank" rel="noopener noreferrer">www.eamsquare.com</a>
+                <a
+                  href="http://eamsquare.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  www.eamsquare.com
+                </a>
               </div>
               <div className="contact-item">
-
-              <FaUserTie className="icon" />
-                <a href="/careers" target="_blank" rel="noopener noreferrer">Careers</a>
+                <FaUserTie className="icon" />
+                {/* <NavLink href="/careers">Home</NavLink> */}
+                <a href="/careers" target="" rel="noopener noreferrer">
+                  Careers
+                </a>
               </div>
             </div>
           </div>
@@ -148,12 +175,32 @@ const Footer = () => {
               />
             </button>
           </form>
-          {successMessage && <p className="success-message">{successMessage}</p>}
+          {successMessage && (
+            <p className="success-message">{successMessage}</p>
+          )}
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <div className="social-media">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF className="icon" /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram className="icon" /></a>
-            <a href="https://linkedin.com/in/eamsquare" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className="icon" /></a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF className="icon" />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="icon" />
+            </a>
+            <a
+              href="https://linkedin.com/in/eamsquare"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn className="icon" />
+            </a>
           </div>
         </div>
       </div>
